@@ -9,3 +9,5 @@ langchain==0.0.312
 httpx==0.26.4
 alembic==1.11.1
 python-multipart==0.0.6
+faiss-cpu==1.7.4
+tiktoken==0.4.0

@@ -76,3 +76,18 @@ for log in logs[:20]:
         st.write(log['prompt'])
         st.write("**Response**")
         st.write(log['response'])
+
+st.markdown("---")
+st.header("RAG Demo")
+with st.form("rag_form"):
+    rag_doc = st.text_area("Document for retrieval")
+    rag_question = st.text_input("Question")
+    rag_submit = st.form_submit_button("Ask")
+    if rag_submit:
+        payload = {"document": rag_doc, "question": rag_question}
+        res = requests.post(f"{API_BASE}/agents/rag/query", json=payload)
+        if res.ok:
+            st.success("Answer")
+            st.write(res.json().get("answer"))
+        else:
+            st.error(res.text)
