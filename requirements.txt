@@ -4,7 +4,7 @@ sqlalchemy==2.0.24
 pydantic==2.9.0
 python-dotenv==1.0.1
 streamlit==1.26.0
-openai==1.9.0
+google-generativeai==0.3.0
 langchain==0.0.312
 httpx==0.26.4
 alembic==1.11.1

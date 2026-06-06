@@ -6,7 +6,7 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./agentops.db")
-AI_PROVIDER = os.getenv("AI_PROVIDER", "openai")
+AI_PROVIDER = os.getenv("AI_PROVIDER", "gemini")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
